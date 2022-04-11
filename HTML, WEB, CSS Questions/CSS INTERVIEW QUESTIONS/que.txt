@@ -1,0 +1,45 @@
+
+
+1. how to add comments on css?
+
+>>> Place your plain text inside /* */ marks.
+
+2. Why do we use pseudo-class?
+
+>>> A Pseudo class in CSS is used to define the special state of an element. 
+    It can be combined with a CSS selector to add an effect to existing elements based on their states. 
+    For Example, changing the style of an element when the user hovers over it, or when a link is visited.
+
+3. How is specificity applied?
+
+>>> If there are two or more CSS rules that point to the same element, 
+    the selector with the highest specificity value will "win", 
+    and its style declaration will be applied to that HTML element. 
+    Think of specificity as a score/rank that determines which style declaration are ultimately applied to an element.
+
+4. What method allows an element to be moved from its current position?
+
+>>> The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+
+5. what properties does flex model have?
+
+>>> flex-grow Property: A number that specifies, 
+                        how much items will grow relative to the rest of the flexible items.
+
+    flex-shrink Property: A number that specifies, 
+                          how much items will shrink relative to the rest of the flexible items.
+
+    flex-basis Property: It sets the length of items. 
+                         Legal values of flex-basis are: auto, inherit, or a number followed by %, em, px, or any other length unit.
+
+    flex-wrap Property: The CSS flex-wrap property is used to specify whether flex items are forced 
+                        into a single line or wrapped onto multiple lines.
+
+6. What is the difference between flex and grids?
+
+>>> The basic difference between CSS Grid Layout and CSS Flexbox Layout is that flexbox 
+    was designed for layout in one dimension - either a row or a column. 
+    Grid was designed for two-dimensional layout - rows, and columns at the same time.
+
+
+7. Give an example where we have to use grids and where you have to use flexbox?

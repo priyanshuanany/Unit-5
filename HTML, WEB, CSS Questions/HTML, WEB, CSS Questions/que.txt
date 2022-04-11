@@ -1,0 +1,303 @@
+
+
+1. Explain briefly what happens when you hit a url? explain DNS lookup
+
+>>>>>
+      URL stands for Uniform Resource Locator. URL is the address of the website which you can find in the address bar of your web browser.
+      It is a reference to a resource on the internet, be it images, hypertext pages, audio/video files, etc.
+
+      a. Browser checks cache for DNS entry to find the corresponding IP address of website.
+         It looks for  cache. If not found in one, then continues checking to the next until found.
+         And the chaches are :- 
+            >>> Browser Cache
+            >>> Operating Systems Cache
+            >>> Router Cache
+            >>> ISP Cache
+
+      b. If not found in cache, ISP’s (Internet Service Provider) DNS server initiates a DNS query to find IP 
+             address of server that hosts the domain name.
+         The requests are sent using small data packets that contain information content of request and IP address it is destined for.
+
+      c. Browser initiates a TCP (Transfer Control Protocol) connection with the server using synchronize(SYN) and acknowledge(ACK) messages.
+
+      d. Browser sends an HTTP request to the web server. GET or POST request.
+
+      e. Server on the host computer handles that request and sends back a response. 
+             It assembles a response in some format like JSON, XML and HTML.
+
+      f. Server sends out an HTTP response along with the status of response.
+
+      g. Browser displays HTML content.
+
+       DNS :-   DNS is short for Domain Name System.
+                Like a phonebook, DNS maintains and maps the name of the website, i.e. URL, and particular IP address it links to. 
+                Every URL on the internet has a unique IP address which is of the computer which hosts the server of the website requested.
+
+
+2. What is a URLs full form? Explain what a url is and the four parts it consists 
+   of The protocol in use The hostname of the server The location of the file The arguments to the file
+
+>>>>>> 
+        URL stands for Uniform Resource Locator. It is the address of a resource, which can be a specific webpage or a file, on the internet.
+        It is also known as web address when it is used with http. URL is a specific character string that is used to access data from the World Wide Web. 
+        It is a type of URI (Uniform Resource Identifier).
+
+        Every URL contains the following information:-
+
+        The scheme name or protocol.
+        A colon, two slashes.
+        A host, normally called a domain name but sometimes as a literal IP address.
+        A colon followed by a port number.
+        Full path of the resource.
+
+        The four main components of URLs are the protocol, domain, path, and query.
+
+
+3. What is HTTP protocol?
+
+>>>>>>>  HTTP stands for Hyper Text Transfer Protocol. 
+         Communication between client computers and web servers is done by sending HTTP Requests and receiving HTTP Responses.
+
+        After that HTTP Request / Response :-
+                Communication between clients and servers is done by requests and responses:
+
+                A client (a browser) sends an HTTP request to the web
+                A web server receives the request
+                The server runs an application to process the request
+                The server returns an HTTP response (output) to the browser
+                The client (the browser) receives the response
+
+
+4. What is TCP Protocol?
+
+>>>>>>> TCP stands for Transmission Control Protocol a communications standard that enables application programs and 
+        computing devices to exchange messages over a network.
+
+        It is designed to send packets across the internet and ensure the successful delivery of data and messages over networks.
+
+
+5. Explain all the different HTTP methods?
+
+>>>>>>>  HTTP Methods:-
+            GET :- GET is used to request data from a specified resource.
+            POST :- POST is used to send data to a server to create/update a resource.
+            PUT:- PUT is used to send data to a server to create/update a resource.
+            HEAD :-  HEAD is almost identical to GET, but without the response body.
+            DELETE :- The DELETE method deletes the specified resource.
+            PATCH :- The PATCH method is used to apply partial modifications to a resource.
+            OPTIONS :- The OPTIONS method describes the communication options for the target resource.
+            CONNECT :- The CONNECT method is used to start a two-way communications (a tunnel) with the requested resource.
+            TRACE :-  The TRACE method method is used to perform a message loop-back test that tests the path for the target resource (useful for debugging purposes).
+            The two most common HTTP methods are: GET and POST.
+
+
+6. What are HTTP headers?
+
+>>>>>>>>  The HTTP headers are used to pass additional information between the clients and the server through the request and response header. 
+          All the headers are case-insensitive, headers fields are separated by colon, key-value pairs in clear-text string format. 
+          The end of the header section denoted by an empty field header. There are a few header fields that can contain the comments. 
+          And a few headers can contain quality(q) key-value pairs that separated by an equal sign. 
+
+          There are four kinds of headers context-wise: 
+
+            General Header: This type of headers applied on Request and Response headers both but with out affecting the database body.
+
+            Request Header: This type of headers contains information about the fetched request by the client.
+            
+            Response Header: This type of headers contains the location of the source that has been requested by the client.
+            
+            Entity Header: This type of headers contains the information about the body of the resources like MIME type, Content-length.
+
+
+7. What are some HTTP response codes? what does it mean? 2xx, 3xx, 4xx, 5xx
+
+>>>>>>>> The HTTP status code determines whether the request made by the client has been successfully completed or not. 
+         The server's status codes are provided in response to the client's request to the server. 
+         In short, we can say that when the client makes a request, 
+         then the HTTP status codes sent by the server allow the clients to know about whether the request was a success, 
+         a failure, or something in-between.
+        
+            1xx- informational
+            2xx- Success
+            3xx- Redirection
+            4xx- Client error
+            5xx- Server error
+
+
+8. What does cache control on http response mean?
+
+>>>>>>> The Cache-Control header is a general header, that specifies the caching policies of server responses as well as client requests. 
+        Basically, it gives information about the manner in which a particular resource is cached, location of the cached resource, 
+        and its maximum age attained before getting expired i.e. time to live.
+
+
+9. What is polling?
+
+>>>>>>> Polling is a technique by which the client asking the server for new data regularly. 
+        We can do polling in two ways: Short Polling and Long Polling. 
+        In simple terms, Short polling is an AJAX-based timer that calls at fixed delays whereas 
+        Long polling is based on Comet (i.e server will send data to the client when the server event happens with no delay). 
+        Both have pros and cons and suited based on the use case. 
+
+
+10. What is long polling?
+
+>>>>>>  It is a technology client requests for data from the server besides waiting for an instant response or 
+        essentially entails making an HTTP request to a server and then maintaining the connection open to enable the server to reply later. 
+        With the help of long polling the server permits about 6 parallel connections from the browser. 
+        It is convenient in contrast to other ways, and it is the oldest method and for this reason, is supported on all web browsers. 
+        Though due to the fewer updates in this it does now not furnish re-connection handling.
+
+11. What are web sockets?
+
+>>>>>>  It is a pc communication protocol that permits us full-duplex communication channels over a single transfer control protocol connection. 
+        This protocol permits an interplay between a browser and web server with low weight overheads and thus offering real-time 
+        data transfer from and to the server.
+        WebSocket “is designed to work over HTTP ports 80 and 443 as well as to support HTTP proxies and intermediaries” 
+
+
+12. How is web sockets different from HTTP?
+
+>>>>>>  WebSocket is a protocol providing full-duplex communication channels over a single TCP connection.
+        Where as, HTTP providing half-duplex communication.
+
+        Information exchange mode of WebSocket is bidirectional. 
+        Means, server can push information to the client (which does not allow direct HTTP).
+
+        The contents of each stream are HTTP requests and responses, just encoded and packed up differently. 
+        Where as, WebSocket adds a number of features to manage the streams, but leaves old semantics untouched.
+
+
+13. What is HTTPS?
+
+>>>>>   HTTPS is an abbreviation of Hypertext Transfer Protocol Secure. 
+        It is a secure extension or version of HTTP. 
+        This protocol is mainly used for providing security to the data sent between a website and the web browser. 
+        It is widely used on the internet and used for secure communications. This protocol uses the 443 port number for communicating the data.
+
+        This protocol is also called HTTP over SSL because the HTTPS communication protocols are encrypted using the SSL (Secure Socket Layer).
+
+
+14. What is Cross Origin Resource Sharing? ( CORS ) Why do we need it?
+
+>>>>>   CORS stands for Cross-Origin Resource Sharing. 
+        It allows you to make requests from one website to another website in the browser, 
+        which is normally prohibited by another browser policy called the Same-Origin Policy (SOP).
+
+        The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. 
+        Modern browsers use CORS in APIs such as XMLHttpRequest or Fetch to mitigate the risks of cross-origin HTTP requests.
+
+
+15. What does Access-Control-Allow-Origin header do?
+
+>>>>>   The Access-Control-Allow-Origin header is included in the response from one website to a 
+        request originating from another website, and identifies the permitted origin of the request. 
+        A web browser compares the Access-Control-Allow-Origin with the requesting website's origin 
+        and permits access to the response if they match.
+
+
+16. What is clickjacking? How do you fix it?
+
+>>>>>   Clickjacking is an attack that fools users into thinking they are clicking on one thing when 
+        they are actually clicking on another. Its other name, user interface (UI) redressing, better describes 
+        what is going on. Users think they are using a web page’s normal UI, but in fact there is a hidden UI in control; 
+        in other words, the UI has been redressed. When users click something they think is safe, 
+        the hidden UI performs a different action.
+
+17.  What are some performance metrics for your website?
+
+>>>>>  The Top Ten Website Performance Metrics:-
+       > Page Speed
+       > Time to Title
+       > Time to Start Render
+       > Time to Interact
+       > DNS Lookup Speed
+       > Bounce Rate
+       > Requests Per Second
+       > Error Rate
+       > Time to First Byte/Last Byte
+       > Conversion Rate
+       
+
+18.  What does the following term mean?
+        
+        Time to first byte :-   Time to First Byte (TTFB) refers to the time between the browser requesting 
+                                a page and when it receives the first byte of information from the server. 
+                                This time includes DNS lookup and establishing the connection using a TCP 
+                                handshake and SSL handshake if the request is made over https.
+
+                                TTFB is the time it takes between the start of the request and the start of the response, 
+                                in milliseconds:
+                                                TTFB = responseStart - navigationStart
+
+        Page load time :-       Page load time is the average amount of time it takes for a page to show up on your screen. 
+                                It's calculated from initiation (when you click on a page link or type in a Web address) 
+                                to completion (when the page is fully loaded in the browser).
+
+
+19. What do CDN or Content Delivery Networks do? When do you need a CDN?
+
+>>>>>>   A content delivery network (CDN) refers to a geographically distributed group of
+         servers which work together to provide fast delivery of Internet content.
+
+         A CDN allows for the quick transfer of assets needed for loading Internet content including 
+         HTML pages, javascript files, stylesheets, images, and videos. 
+         The popularity of CDN services continues to grow, and today the majority of web traffic is 
+         served through CDNs, including traffic from major sites like Facebook, Netflix, and Amazon.
+
+         A properly configured CDN may also help protect websites against some common malicious attacks, 
+         such as Distributed Denial of Service (DDOS) attacks.
+
+         The benefits of using a CDN ::-
+             > Improving website load times 
+             > Reducing bandwidth costs
+             > Increasing content availability and redundancy
+             > Improving website security
+
+
+20. What is the difference between Client Side Renderring and Server Side Renderring?
+
+>>>>>>  Client Side Renderring ::-
+
+        Client-side rendering allows developers to make their websites entirely rendered in the browser with JavaScript. 
+        Instead of having a different HTML page per route, a client-side rendered website creates each route dynamically 
+        directly in the browser. 
+        This approach spread once JS frameworks made it easy to take.
+
+        Server Side Renderring ::-
+
+        Server-side rendering allows developers to pre-populate a web page with custom user data directly on the server. 
+        It is generally faster to make all the requests within a server than making extra browser-to-server round-trips 
+        for them. 
+        This is what developers used to do before client-side rendering.
+        
+        Difference ::-
+
+        Client-side rendering manages the routing dynamically without refreshing the page 
+        every time a user requests a different route. 
+        But server-side rendering is able to display a fully populated page on the first 
+        load for any route of the website, whereas client-side rendering displays a blank page first.
+
+
+21. What is Progressive Renderring?
+
+>>>>>>  Progressive Rendering (Progressive Server Side Rendering) is a technique in which once you render 
+        the critical content on the server, you start streaming it to the client without waiting for non-critical content. 
+        You then stream the non-critical content later once it’s rendered on the server. 
+        The browser starts to progressively render (paint) the HTML on the page as soon as a chunk for critical content is received. 
+        Non-critical content is then later rendered (paint) on the page when the browser receives it from the server.
+
+
+22. What is the difference between Preloading and Prefetching resources?
+
+>>>>>> Preload is a declarative fetch, allowing you to force the browser to make a request for a 
+       resource without blocking the document's onload event. Prefetch is a hint to the browser 
+       that a resource might be needed,
+       but delegates deciding whether and when loading it is a good idea or not to the browser.
+
+
+23. What are service workers?
+
+>>>>>> A service worker is a type of web worker. 
+       It's essentially a JavaScript file that runs separately from the main browser thread, 
+       intercepting network requests, caching or retrieving resources from the cache, and delivering push messages.
