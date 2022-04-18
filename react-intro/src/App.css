@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+}
+
+.div{
+  margin-left: 50px;
+}
+
+.red{
+  color: red;
+}
+
+.orange{
+  color: orange
+}
+.navbar{
+  display:flex;
+  align-items: center;
+  height:100px;
+  background-color: rgb(11, 24, 35);
+  color: white;
+  justify-content: space-around;
+}
+
+.navbtn{
+  color:white;
+  background-color: rgb(0, 183, 255);
+  font-size: 20px;
+  padding:10px 20px;
+  border: none;
+  border-radius:20px;
+  cursor: pointer;
+}
+
+.navlinks{
+  list-style-type: none;
+  padding: 60px;
+  display: flex;
+}
+
+.li{
+  margin-left: 40px;
+  font-weight:bold;
+  cursor: pointer;
+}
+.logo{
+  font-size: 25px;
+  font-weight: bold;
+}
